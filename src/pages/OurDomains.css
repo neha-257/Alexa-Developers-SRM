@@ -1,0 +1,155 @@
+@import url('https://use.typekit.net/lsf5xpv.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.frame--header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.frame__heading {
+  text-align: left;
+}
+
+.frame__heading h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.frame__heading p {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+.frame__heading h2 {
+  margin: 0;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-left: -0.065em;
+  font-size: clamp(2.5rem,12vw,7rem);
+  letter-spacing: -0.105em;
+  font-variation-settings: "slnt" 0, "wdth" 400, "wght" 900, "INKT" 400;
+}
+
+.frame__heading p {
+  margin: 0;
+}
+
+i {
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 400;
+}
+
+.content--sticky {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  --offset: 0px;
+  top: var(--offset);
+  height: calc(100vh - var(--offset));
+}
+
+.content--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 80vh;
+  width: 95vw;
+  max-width: 500px;
+  aspect-ratio: 0.8;
+  top: 10vh;
+  margin: auto;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 8vh;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content__img--small {
+  width: 100%;
+  height: auto;
+  max-height: 40%;
+  object-fit: contain;
+  margin-bottom: 0.25rem;
+}
+
+.card-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content__title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.domain-name {
+  display: block;
+}
+
+.content__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+.bg-1,
+.bg-3 { 
+  background: linear-gradient(to left, #2a4855, #183038); 
+}
+
+.bg-2,
+.bg-4 { 
+  background: linear-gradient(to right, #203A43, #0F2027); 
+}
+
+@media screen and (min-width: 63em) {
+  .content--card {
+    width: 50vw;
+  }
+}
+
+.wrap {
+  margin-top: 6rem;
+}
+
+.content--outro {
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content--outro .text-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.2;
+}
+
+.content__img.spacer {
+  width: 150px;
+  height: auto;
+  margin-top: 3rem;
+}

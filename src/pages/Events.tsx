@@ -1,52 +1,57 @@
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import EventCard from '../components/EventCard';
 
-const events = [
-  {
-    id: 1,
-    title: 'Annual Hackathon',
-    date: '2024-05-15',
-    description: 'Join us for our annual 24-hour hackathon event!',
-  },
-  {
-    id: 2,
-    title: 'Tech Talk: AI and Machine Learning',
-    date: '2024-06-10',
-    description: 'Learn about the latest advancements in AI and ML from industry experts.',
-  },
-  {
-    id: 3,
-    title: 'Workshop: Building Alexa Skills',
-    date: '2024-07-05',
-    description: 'Hands-on workshop on creating custom Alexa skills.',
-  },
-];
+// Import your images
+import e1 from '../assets/images/e1.jpg';
+import e2 from '../assets/images/e2.jpg';
+import e3 from '../assets/images/e3.jpg';
+import e4 from '../assets/images/e4.jpg';
 
 const Events: React.FC = () => {
+  const events = [
+    { 
+      image: e1, 
+      number: "01", 
+      tags: "#git #github", 
+      category: "GIT 101",
+      description: "Learn the fundamentals of version control with Git and GitHub. This workshop will cover basic commands, branching strategies, and collaborative workflows. Perfect for beginners and those looking to solidify their Git knowledge. Venue: Mini Hall 2, TP Ganesan Auditorium. Date: 15 November, 2023."
+    },
+    { 
+      image: e2, 
+      number: "02", 
+      tags: "#UI #UX #design", 
+      category: "UI/UX Workshop",
+      description: "Dive into the world of User Interface and User Experience design. This hands-on workshop will cover design principles, prototyping tools, and user research techniques. Bring your laptop and creativity! Venue: Mini Hall 2, TP Ganesan Auditorium. Date: 21 April, 2024."
+    },
+    { 
+      image: e3, 
+      number: "03", 
+      tags: "#NFT #blockchain", 
+      category: "TechneXGen",
+      description: "Explore the cutting-edge intersection of technology and art with our NFT creation workshop. Learn about blockchain technology, digital art, and how to mint your own NFTs. Open to both tech enthusiasts and artists. Venue: Mini Hall 2, TP Ganesan Auditorium. Date: 28 July, 2024."
+    },
+    { 
+      image: e4, 
+      number: "04", 
+      tags: "#GraphQL #API", 
+      category: "Graph-Q?",
+      description: "Unravel the power of GraphQL in modern API development. This technical workshop will cover GraphQL basics, schema design, and integration with various backend technologies. Some programming experience recommended. Venue: Mini Hall 2, TP Ganesan Auditorium. Date: 26 September, 2024."
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-8">Upcoming Events</h1>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {events.map((event) => (
-            <div key={event.id} className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="px-4 py-5 sm:p-6">
-                <h3 className="text-lg font-medium text-gray-900">{event.title}</h3>
-                <div className="mt-2 flex items-center text-sm text-gray-500">
-                  <Calendar className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
-                  {event.date}
-                </div>
-                <p className="mt-3 text-base text-gray-500">{event.description}</p>
-              </div>
-              <div className="bg-gray-50 px-4 py-4 sm:px-6">
-                <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Learn More
-                </button>
-              </div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-r from-[#2C5364] via-[#203A43] to-[#0F2027] text-white">
+      <main className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-5xl font-bold mb-8 text-center font-poppins" style={{ fontVariationSettings: '"slnt" 0, "wdth" 400, "wght" 900, "INKT" 400' }}>Events</h1>
+        <p className="text-xl mb-12 text-center font-poppins">
+          The SRM Alexa Developer Club is a hub of excitement with events like Git 101, hackathons, workshops, and tech games. Learn essential skills in Git 101, unleash your creativity in hackathons, dive deep into cutting-edge tech during workshops, and enjoy the thrill of competition in tech games. Each event ignites passion, fosters innovation, and builds a strong tech community.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {events.map((event, index) => (
+            <EventCard key={index} {...event} />
           ))}
         </div>
-      </div>
+      </main>
     </div>
   );
 };
